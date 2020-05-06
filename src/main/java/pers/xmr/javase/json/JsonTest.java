@@ -12,11 +12,11 @@ public class JsonTest {
         Object o = new Object();
         System.out.println(o.toString());
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("MER_DISCOUNT_CUSTID", "");
-        jsonObject.put("MER_FROZEN_VOUCHERSN", "");
-        jsonObject.put("MER_DISCOUNT" , 0.0);
-        jsonObject.put("MER_DISCOUNT_STATE" , "");
-        jsonObject.put("MER_DISCOUNT_ACCOUNTID" , "");
+        jsonObject.put("KEY1", "");
+        jsonObject.put("KEY2", "");
+        jsonObject.put("KEY3" , 0.0);
+        jsonObject.put("KEY4" , "");
+        jsonObject.put("KEY5" , "");
         System.out.println(jsonObject.toJSONString());
     }
 
