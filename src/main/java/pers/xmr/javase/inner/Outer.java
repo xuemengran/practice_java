@@ -2,31 +2,24 @@ package pers.xmr.javase.inner;
 
 /**
  * @author xmr
- * @date 2020/4/2 20:44
+ * @date 2020/5/6 17:12
  * @description
  */
-public class Outer implements Runnable{
-    int num = 1;
-
-    @Override
-    public void run() {
-        
-    }
-
-    private class Inner {
-        int num = 3;
-        void testMethod() {
-
-            System.out.println("Hello World! ");
+class Outer {
+    public int num = 10;
+    class Inner {
+        public int num = 20;
+        public void show() {
+            int num = 30;
+            System.out.println(num);
+            System.out.println(this.num);
+            System.out.println(Outer.this.num);
         }
     }
-    public void test() {
-        Inner inner = new Inner();
-        inner.testMethod();
-        System.out.println(inner.num);
-    }
+}
+class InnerClassTest2 {
     public static void main(String[] args) {
-       Outer outer = new Outer();
-       outer.test();
+        Outer.Inner oi = new Outer().new Inner();
+        oi.show();
     }
 }
